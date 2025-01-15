@@ -1,0 +1,24 @@
+
+    /* Example of custom styles */
+.carousel-item{
+    margin: 0!important;
+
+    border:1px solid red;
+}
+    .carousel-item img {
+        height: 600px;
+        object-fit: cover;
+        width: 100vw;
+        border-radius: 10px;
+        opacity: 80%;
+    }
+
+.carousel-item h5{
+    color: red;
+    font-size: 80px;
+
+}
+.carousel-item p{
+    color: green;
+    font-weight: bolder;
+}
