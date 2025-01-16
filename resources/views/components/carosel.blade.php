@@ -1,40 +1,32 @@
-
-
-<div class="container vision-mission-outer">
-    <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="{{ asset('images/slider-image1.jpg') }}" class="d-block w-100" alt="..."
-                     style="height: 600px; object-fit: cover; width: 100vw;">
-                <div class="carousel-caption d-none d-md-block text-center">
-                    <h5>First Slide Caption</h5>
-                    <p>Description of the first slide goes here.</p>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img src="{{ asset('images/slider-image2.jpg') }}" class="d-block w-100" alt="..."
-                     style="height: 600px; object-fit: cover; width: 100vw;">
-                <div class="carousel-caption d-none d-md-block text-center">
-                    <h5>Second Slide Caption</h5>
-                    <p>Description of the second slide goes here.</p>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img src="{{ asset('images/slider-image3.jpg') }}" class="d-block w-100" alt="..."
-                     style="height: 600px; object-fit: cover; width: 100vw;">
-                <div class="carousel-caption d-none d-md-block text-center">
-                    <h5>Third Slide Caption</h5>
-                    <p>Description of the third slide goes here.</p>
-                </div>
-            </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
+<section class="cloneable">
+    <div class="looping-words">
+      <div class="looping-words__containers">
+        <ul data-looping-words-list="" class="looping-words__list">
+          <li class="looping-words__list">
+            <p class="looping-words__p">Sri Lankan 
+            </p>
+          </li>
+          <li class="looping-words__list">
+            <p class="looping-words__p">SPA </p>
+          </li>
+          <li class="looping-words__list">
+            <p class="looping-words__p">Association</p>
+          </li>
+          <li class="looping-words__list">
+            <p class="looping-words__p">For Healthy</p>
+          </li>
+          <li class="looping-words__list">
+            <p class="looping-words__p">Society</p>
+          </li>
+        </ul>
+      </div>
+      <div class="looping-words__fade"></div>
+      <div data-looping-words-selector="" class="looping-words__selector">
+        <div class="looping-words__edge"></div>
+        <div class="looping-words__edge is--2"></div>
+        <div class="looping-words__edge is--3"></div>
+        <div class="looping-words__edge is--4"></div>
+      </div>
     </div>
-</div>
+</section>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
