@@ -20,8 +20,8 @@
             <!-- Footer Column 3 -->
             <div class="col-lg-4 col-md-12">
                 <h5>Contact Us</h5>
-                <p>Email: support@example.com</p>
-                <p>Phone: +1 234 567 890</p>
+                <p>Email: srilankaspaassociation@gmail.com</p>
+                <p>Phone: +94779504951</p>
                 <p>Address: 123 Main Street, City, Country</p>
             </div>
         </div>
