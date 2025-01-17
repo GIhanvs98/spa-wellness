@@ -23,4 +23,12 @@ class FeedbackController extends Controller
         // Redirect back with a success message
         return back()->with('success', 'Thank you for your feedback!');
     }
+
+
+public function showCompliance()
+{
+    $feedbacks = Feedback::all(); // Fetch all feedback records
+    return view('dashboard/feedback', compact('feedbacks'));
+}
+
 }
