@@ -4,8 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FeedbackController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\DashboardController;
-
-
+use App\Http\Controllers\PostController; // Import PostController
 
 // Static pages
 Route::view('/', 'home')->name('home');
@@ -35,8 +34,6 @@ Route::middleware('auth')->group(function () {
     Route::post('/feedback', [FeedbackController::class, 'submit'])->name('submit');
     Route::get('/compliance', [FeedbackController::class, 'showCompliance'])->name('compliance');
 
-
-
     // User Management Routes (Admin-only)
     Route::get('/users', [DashboardController::class, 'listUsers'])->name('users');
     Route::get('/users/{user}', [DashboardController::class, 'viewUser'])->name('viewUser');
@@ -50,5 +47,14 @@ Route::middleware('auth')->group(function () {
 
     // Logout Route
     Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
-    
+
+    //test blog
+    // Blog Management Routes (Admin-only)
+    Route::prefix('dashboard')->group(function () {
+        Route::resource('posts', PostController::class)->except(['show']);
+    });
 });
+
+// Public Blog Routes
+Route::get('knowledge-area', [PostController::class, 'index'])->name('posts.index');
+Route::get('knowledge-area/{slug}', [PostController::class, 'show'])->name('posts.show');
