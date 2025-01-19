@@ -6,10 +6,15 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\PostController; // Import PostController
 
+
 // Static pages
 Route::view('/', 'home')->name('home');
-Route::view('/knowledge-area', 'knowledge-area')->name('knowledge-area');
+
 Route::view('/about-us', 'about-us')->name('about-us');
+Route::get('/reading', [PostController::class, 'showAllPosts'])->name('reading');
+
+
+
 
 // Feedback Form Routes
 Route::get('/feedback', function () {
@@ -56,5 +61,7 @@ Route::middleware('auth')->group(function () {
 });
 
 // Public Blog Routes
-Route::get('knowledge-area', [PostController::class, 'index'])->name('posts.index');
-Route::get('knowledge-area/{slug}', [PostController::class, 'show'])->name('posts.show');
+Route::get('knowledge-area', [PostController::class, 'index'])->name('dashboard.posts.create');
+Route::get('knowledge-area/{slug}', [PostController::class, 'show'])->name('dashboard.posts.create');
+Route::get('/posts', [PostController::class, 'showAllPosts']);
+Route::get('/posts/{id}', [PostController::class, 'showFullPost']);
