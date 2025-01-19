@@ -7,17 +7,18 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('home') }}">Home</a>
+                    <a class="nav-link {{ Request::routeIs('home') ? 'active' : '' }}" href="{{ route('home') }}">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('knowledge-area') }}">Knowledge Area</a>
+                    <a class="nav-link {{ Request::routeIs('reading') ? 'active' : '' }}" href="{{ route('reading') }}">Knowledge Area</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('feedback') }}">Feedback</a>
+                    <a class="nav-link {{ Request::routeIs('feedback') ? 'active' : '' }}" href="{{ route('feedback') }}">Feedback</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('about-us') }}">About Us</a>
+                    <a class="nav-link {{ Request::routeIs('about-us') ? 'active' : '' }}" href="{{ route('about-us') }}">About Us</a>
                 </li>
+                
             </ul>
         </div>
     </div>

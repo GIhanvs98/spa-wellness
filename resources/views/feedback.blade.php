@@ -3,7 +3,7 @@
 
 @section('content')
 <div class="container mt-5">
-    <h3 class="text-center mb-4">We Value Your Feedback</h3>
+    <h3 class="text-center mb-4">Your Complaint Here</h3>
     <form action="" method="POST">
         @csrf
         <div class="mb-3">
