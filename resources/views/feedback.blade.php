@@ -1,96 +1,36 @@
-@extends('layout.dashboard')
+<!-- resources/views/feedback.blade.php -->
+@extends('layout.app')
 
 @section('content')
-<div class="container mt-4">
-    <h1 class="mb-4">Create Post</h1>
-
-    <form method="POST" action="{{ route('posts.store') }}" class="needs-validation" novalidate>
+<div class="container mt-5">
+    <h3 class="text-center mb-4">Your Complaint Here</h3>
+    <form action="" method="POST">
         @csrf
-
-        <!-- Title Field -->
         <div class="mb-3">
-            <label for="title" class="form-label">Title</label>
-            <input 
-                type="text" 
-                name="title" 
-                id="title" 
-                class="form-control @error('title') is-invalid @enderror"
-                value="{{ old('title') }}" 
-                required
-            >
-            @error('title')
-                <div class="invalid-feedback">{{ $message }}</div>
-            @enderror
+            <label for="name" class="form-label">Name</label>
+            <input type="text" name="name" id="name" class="form-control" placeholder="Enter your name" required>
         </div>
-
-        <!-- Category Selection -->
         <div class="mb-3">
-            <label for="category" class="form-label">Category</label>
-            <select 
-                name="category_id" 
-                id="category" 
-                class="form-select @error('category_id') is-invalid @enderror" 
-                required
-            >
-                <option value="" disabled selected>Select a category</option>
-                @foreach ($categories as $category)
-                    <option value="{{ $category->id }}" {{ old('category_id') == $category->id ? 'selected' : '' }}>
-                        {{ $category->name }}
-                    </option>
-                @endforeach
+            <label for="email" class="form-label">Email</label>
+            <input type="email" name="email" id="email" class="form-control" placeholder="Enter your email" required>
+        </div>
+        <div class="mb-3">
+            <label for="rating" class="form-label">Rating</label>
+            <select name="rating" id="rating" class="form-select" required>
+                <option value="5">issue 1</option>
+                <option value="4">issue 2</option>
+                <option value="3">issue 3</option>
+                <option value="2">issue 4</option>
+                <option value="1">issue 5</option>
             </select>
-            @error('category_id')
-                <div class="invalid-feedback">{{ $message }}</div>
-            @enderror
         </div>
-
-        <!-- Paragraph Content -->
-        <div id="paragraph-section">
-            <label class="form-label">Content Paragraphs</label>
-            <div class="paragraph mb-3">
-                <textarea 
-                    name="content[]" 
-                    class="form-control @error('content.*') is-invalid @enderror" 
-                    rows="3" 
-                    placeholder="Write a paragraph..." 
-                    required
-                >{{ old('content.0') }}</textarea>
-                @error('content.*')
-                    <div class="invalid-feedback">{{ $message }}</div>
-                @enderror
-            </div>
-        </div>
-
-        <!-- Add Paragraph Button -->
         <div class="mb-3">
-            <button type="button" class="btn btn-secondary" id="add-paragraph">Add Paragraph</button>
+            <label for="comments" class="form-label">Comments</label>
+            <textarea name="comments" id="comments" rows="4" class="form-control" placeholder="Share your thoughts..." required></textarea>
         </div>
-
-        <!-- Submit Button -->
-        <button type="submit" class="btn btn-primary">Create Post</button>
+        <div class="text-center">
+            <button type="submit" class="btn btn-primary">Submit Feedback</button>
+        </div>
     </form>
 </div>
-
-<script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const paragraphSection = document.getElementById('paragraph-section');
-        const addParagraphBtn = document.getElementById('add-paragraph');
-
-        // Add new paragraph textarea
-        addParagraphBtn.addEventListener('click', () => {
-            const newParagraph = document.createElement('div');
-            newParagraph.classList.add('paragraph', 'mb-3');
-            newParagraph.innerHTML = `
-                <textarea 
-                    name="content[]" 
-                    class="form-control" 
-                    rows="3" 
-                    placeholder="Write a paragraph..." 
-                    required
-                ></textarea>
-            `;
-            paragraphSection.appendChild(newParagraph);
-        });
-    });
-</script>
 @endsection
