@@ -18,7 +18,7 @@ Route::get('/reading', [PostController::class, 'showAllPosts'])->name('reading')
 
 // Feedback Form Routes
 Route::get('/feedback', function () {
-    return view('feedback'); // Ensure `resources/views/feedback.blade.php` exists
+    return view('feedback'); 
 })->name('feedback');
 
 Route::post('/feedback', [FeedbackController::class, 'submit'])->name('feedback.submit');

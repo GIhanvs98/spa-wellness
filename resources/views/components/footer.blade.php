@@ -22,7 +22,7 @@
                 <h5>Contact Us</h5>
                 <p>Email: srilankaspaassociation@gmail.com</p>
                 <p>Phone: +94779504951</p>
-                <p>Address: 123 Main Street, City, Country</p>
+                <p>Address: 7 th floor, marino mall, 590 Galle Rd, colombo 00300</p>
             </div>
         </div>
 

@@ -15,13 +15,16 @@
             <input type="email" name="email" id="email" class="form-control" placeholder="Enter your email" required>
         </div>
         <div class="mb-3">
-            <label for="rating" class="form-label">Rating</label>
+            <label for="rating" class="form-label">Category</label>
             <select name="rating" id="rating" class="form-select" required>
-                <option value="5">issue 1</option>
-                <option value="4">issue 2</option>
-                <option value="3">issue 3</option>
-                <option value="2">issue 4</option>
-                <option value="1">issue 5</option>
+                <option value="5">A problem with sexually transmitted diseases</option>
+                <option value="4">A problem with therapists
+                </option>
+                <option value="3">A Price issues
+                </option>
+                <option value="2">A problem with massage
+                </option>
+                <option value="1">A hygiene problem</option>
             </select>
         </div>
         <div class="mb-3">

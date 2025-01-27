@@ -10,13 +10,13 @@ use App\Models\User;
 
 class AuthController extends Controller
 {
-    // Show the signup form
+  
     public function showSignupForm()
     {
         return view('auth.signup');
     }
 
-    // Handle the signup process
+
     public function signup(Request $request)
     {
         $request->validate([
@@ -34,13 +34,12 @@ class AuthController extends Controller
         return redirect()->route('login')->with('success', 'Account created successfully. Please log in.');
     }
 
-    // Show the login form
     public function showLoginForm()
     {
         return view('auth.login');
     }
 
-    // Handle the login process
+
     public function login(Request $request)
     {
         $request->validate([
@@ -55,7 +54,7 @@ class AuthController extends Controller
         return back()->withErrors(['email' => 'Invalid credentials.']);
     }
 
-    // Handle logout
+
     public function logout(Request $request)
     {
         Auth::logout();

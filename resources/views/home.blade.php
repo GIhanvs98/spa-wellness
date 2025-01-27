@@ -9,12 +9,12 @@
             <h2>WHY CHOOSING US</h2>
         </div>
         <div class="row">
-            <!-- First Column -->
+         
             <div class="col-lg-6 col-md-12 col-sm-12 why-choose-left-inner ">
                 <img src="{{asset('images/vectors-home/why-choose.jpg')}}" alt="peoples-using-technology">
             </div>
 
-            <!-- Second Column -->
+            
             <div class="col-lg-6 col-md-12 col-sm-12 why-choosing-us-inner" style="">
 
                 <ul>
@@ -84,24 +84,21 @@
         <div class="row">
             <div class="logo-ribbon">
                 <div class="logo-item">
-                    <img src="{{asset('images/logo.jpg')}}" alt="Logo 1">
+                    <img src="{{asset('images/partners/1.jpg')}}" alt="Logo 1">
                 </div>
                 <div class="logo-item">
-                    <img src="{{asset('images/logo.jpg')}}" alt="Logo 1">
+                    <img src="{{asset('images/partners/2.jpg')}}" alt="Logo 2">
 
                 </div>
                 <div class="logo-item">
-                    <img src="{{asset('images/logo.jpg')}}" alt="Logo 1">
+                    <img src="{{asset('images/partners/3.jpg')}}" alt="Logo 3">
 
                 </div>
                 <div class="logo-item">
-                    <img src="{{asset('images/logo.jpg')}}" alt="Logo 1">
+                    <img src="{{asset('images/partners/4.jpg')}}" alt="Logo 4">
 
                 </div>
-                <div class="logo-item">
-                    <img src="{{asset('images/logo.jpg')}}" alt="Logo 1">
-
-                </div>
+                
             </div>
 
         </div>
